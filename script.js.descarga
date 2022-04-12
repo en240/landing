@@ -1,0 +1,11 @@
+$(document).ready(function () {
+  $(document).on("click", ".rectangle", function () {
+    $("#firstStep").fadeOut();
+    $("#thirdStep").fadeIn();
+  });
+
+  $(document).on("click", ".rectangle-mobile", function () {
+    $("#firstStepMobile").fadeOut();
+    $("#thirdStepMobile").fadeIn();
+  });
+});
